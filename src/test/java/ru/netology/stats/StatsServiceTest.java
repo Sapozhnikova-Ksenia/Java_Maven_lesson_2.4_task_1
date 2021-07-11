@@ -12,7 +12,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService ();
         long actual = service.summ (sales);
-        long expacted = 180;
+        long expacted = 123456;
         assertEquals (expacted, actual);
 
     }
