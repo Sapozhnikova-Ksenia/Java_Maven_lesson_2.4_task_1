@@ -17,10 +17,24 @@ public class StatsService {
     }
 
 
+    public int monthMaxSales(long[] sales) {
+        long max = sales [0];
+        for (long sale : sales) {
+            if (sale>max){
+                max=sale;
+            }
+        }
+        int month = 1;
+        int monthMaxSales =0;
+        for (long sale : sales) {
+            if (sale==max) {
+                monthMaxSales=month;
+            }
+            month +=1;
+            
+        }
 
+        return monthMaxSales;
 
-
-
-
-
+    }
 }

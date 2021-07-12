@@ -27,4 +27,17 @@ public class StatsServiceTest {
         assertEquals(expacted, actual);
 
     }
+
+    @Test
+    public void ShouldFitBackMonthMaxSales() {
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
+        StatsService service = new StatsService();
+        long actual = service.monthMaxSales(sales);
+        long expacted = 8;
+        assertEquals(expacted, actual);
+
+    }
+
+
 }
