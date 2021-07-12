@@ -58,4 +58,18 @@ public class StatsService {
         return monthMinSales;
     }
 
+    public int monthCountMoreThanAverage(long[] sales) {
+        long average = average(sales);
+        int count =0;
+        for (long sale : sales) {
+            if (sale > average) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+
+
+
 }
