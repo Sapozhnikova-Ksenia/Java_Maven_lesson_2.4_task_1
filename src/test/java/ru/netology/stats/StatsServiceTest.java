@@ -61,6 +61,16 @@ public class StatsServiceTest {
 
     }
 
+    @Test
+    public void ShouldFitBackCountMonthLessAverage() {
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
+        StatsService service = new StatsService();
+        long actual = service.monthCountLessThanAverage(sales);
+        long expected = 5;
+        assertEquals(expected, actual);
+
+    }
 
 
 
