@@ -34,7 +34,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
         long actual = service.monthMaxSales(sales);
-        long expacted = 8;
+        long expacted = 456;
         assertEquals(expacted, actual);
 
     }
