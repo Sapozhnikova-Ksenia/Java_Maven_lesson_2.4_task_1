@@ -23,7 +23,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
         long actual = service.average(sales);
-        long expacted = 321;
+        long expacted = 15;
         assertEquals(expacted, actual);
 
     }
