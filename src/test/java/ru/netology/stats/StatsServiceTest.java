@@ -12,8 +12,8 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
         long actual = service.summ(sales);
-        long expacted = 180;
-        assertEquals(expacted, actual);
+        long expected = 180;
+        assertEquals(expected, actual);
 
     }
 
@@ -23,8 +23,8 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
         long actual = service.average(sales);
-        long expacted = 15;
-        assertEquals(expacted, actual);
+        long expected = 15;
+        assertEquals(expected, actual);
 
     }
 
@@ -34,10 +34,20 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
         long actual = service.monthMaxSales(sales);
-        long expacted = 8;
-        assertEquals(expacted, actual);
+        long expected = 8;
+        assertEquals(expected, actual);
 
     }
 
+    @Test
+    public void ShouldFitBackMonthMinSales() {
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
+        StatsService service = new StatsService();
+        long actual = service.monthMinSales(sales);
+        long expected = 9;
+        assertEquals(expected, actual);
+
+    }
 
 }

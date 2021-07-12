@@ -37,4 +37,25 @@ public class StatsService {
         return monthMaxSales;
 
     }
+
+    public int monthMinSales(long[] sales) {
+        long min = sales[0];
+        for (long sale : sales) {
+            if (sale < min) {
+                min = sale;
+            }
+        }
+        int month = 1;
+        int monthMinSales = 0;
+        for (long sale : sales) {
+            if (sale == min) {
+                monthMinSales = month;
+            }
+            month += 1;
+
+        }
+
+        return monthMinSales;
+    }
+
 }
