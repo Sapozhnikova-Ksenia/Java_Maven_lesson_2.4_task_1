@@ -7,15 +7,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class StatsServiceTest {
 
     @Test
-    public void ShouldSumm (){
+    public void ShouldSumm() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        StatsService service = new StatsService ();
-        long actual = service.summ (sales);
+        StatsService service = new StatsService();
+        long actual = service.summ(sales);
         long expacted = 180;
-        assertEquals (expacted, actual);
+        assertEquals(expacted, actual);
 
     }
 
+    @Test
+    public void ShouldAverage() {
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
+        StatsService service = new StatsService();
+        long actual = service.average(sales);
+        long expacted = 15;
+        assertEquals(expacted, actual);
+
+    }
 }

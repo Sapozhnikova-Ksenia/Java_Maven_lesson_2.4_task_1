@@ -6,8 +6,21 @@ public class StatsService {
         for (long sale : sales) {
             result += sale;
 
-
         }
-        return result ;
+        return result;
     }
+
+    public long average (long [] sales) {
+        long summ = summ(sales);
+
+        return summ / sales.length;
+    }
+
+
+
+
+
+
+
+
 }
