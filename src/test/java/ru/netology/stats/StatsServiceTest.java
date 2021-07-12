@@ -56,7 +56,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
         long actual = service.monthCountMoreThanAverage(sales);
-        long expected = 5;
+        long expected = 0;
         assertEquals(expected, actual);
 
     }
