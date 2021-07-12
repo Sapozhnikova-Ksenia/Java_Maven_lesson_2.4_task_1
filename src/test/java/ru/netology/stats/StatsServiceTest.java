@@ -45,7 +45,7 @@ public class StatsServiceTest {
 
         StatsService service = new StatsService();
         long actual = service.monthMinSales(sales);
-        long expected = 9;
+        long expected = 654;
         assertEquals(expected, actual);
 
     }
